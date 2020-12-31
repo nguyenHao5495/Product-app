@@ -3,7 +3,8 @@ import { Tabs, Icon } from '@shopify/polaris';
 import ProductList from '../Components/ProductList';
 import {
     QuestionMarkMajor,
-    SettingsMajor
+    SettingsMajor,
+    EmailMajor
 } from '@shopify/polaris-icons';
 const TabsFunction = () => {
     const [selected, setSelected] = useState(0);
@@ -47,8 +48,17 @@ const TabsFunction = () => {
             panelID: 'accepts-marketing-content',
         },
         {
-            id: 'repeat-customers',
-            content: 'Repeat customers',
+            id: 'email-settings',
+            content: (
+                <div className="title_tabs">
+                    <span>
+                        Email Settings
+                    </span>
+                    <Icon
+                        source={EmailMajor} />
+                </div>
+            ),
+
             data: (
                 <ProductList />
             ),
@@ -56,7 +66,15 @@ const TabsFunction = () => {
         },
         {
             id: 'prospects',
-            content: 'Prospects',
+            content: (
+                <div className="title_tabs">
+                    <span>
+                        Email Settings
+                    </span>
+                    <Icon
+                        source={EmailMajor} />
+                </div>
+            ),
             data: (
                 <ProductList />
             ),
